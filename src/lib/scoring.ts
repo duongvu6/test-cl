@@ -57,9 +57,11 @@ export function calculateScore(
   for (const q of questions) {
     const userAnswer = prediction.bonus_answers[String(q.id)];
     if (userAnswer && q.correct_answer && userAnswer === q.correct_answer) {
-      const points =
-        userAnswer === "option_a" ? q.option_a_points : q.option_b_points;
-      total += points;
+      if (q.question_type === "motm") {
+        total += q.option_a_points;
+      } else {
+        total += userAnswer === "option_a" ? q.option_a_points : q.option_b_points;
+      }
     }
   }
 

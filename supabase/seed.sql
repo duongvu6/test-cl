@@ -9,16 +9,16 @@ INSERT INTO bonus_questions (match_id, question_text, question_type, option_a_la
 SELECT id, 'Có bàn thắng trong hiệp 1?', 'yes_no', 'Có', 'Không', 3, 3, 1 FROM match_config WHERE is_active = true;
 
 INSERT INTO bonus_questions (match_id, question_text, question_type, option_a_label, option_b_label, option_a_points, option_b_points, sort_order)
-SELECT id, 'Tổng bàn thắng trên 2.5?', 'yes_no', 'Trên 2.5', 'Dưới 2.5', 3, 3, 2 FROM match_config WHERE is_active = true;
+SELECT id, 'Tổng bàn thắng có từ 4 bàn trở lên không?', 'yes_no', 'Có', 'Không', 5, 3, 2 FROM match_config WHERE is_active = true;
 
 INSERT INTO bonus_questions (match_id, question_text, question_type, option_a_label, option_b_label, option_a_points, option_b_points, sort_order)
-SELECT id, 'Có thẻ đỏ trong trận?', 'yes_no', 'Có', 'Không', 3, 3, 3 FROM match_config WHERE is_active = true;
+SELECT id, 'Trận đấu có bước vào hiệp phụ không?', 'yes_no', 'Có', 'Không', 8, 3, 3 FROM match_config WHERE is_active = true;
 
 INSERT INTO bonus_questions (match_id, question_text, question_type, option_a_label, option_b_label, option_a_points, option_b_points, sort_order)
-SELECT id, 'Đội nào giao bóng trước?', 'multiple_choice', 'PSG', 'Arsenal', 2, 2, 4 FROM match_config WHERE is_active = true;
+SELECT id, 'Gyokeres và Dembele có cùng ghi bàn không ?', 'multiple_choice', 'Có', 'Không', 8, 3, 4 FROM match_config WHERE is_active = true;
 
 INSERT INTO bonus_questions (match_id, question_text, question_type, option_a_label, option_b_label, option_a_points, option_b_points, sort_order)
-SELECT id, 'Cầu thủ xuất sắc nhất trận?', 'motm', NULL, NULL, 5, 0, 5 FROM match_config WHERE is_active = true;
+SELECT id, 'Cầu thủ xuất sắc nhất trận?', 'motm', NULL, NULL, 10, 0, 5 FROM match_config WHERE is_active = true;
 
 -- Cầu thủ PSG
 INSERT INTO players (match_id, name, team) SELECT id, 'Ndjantou', 'home' FROM match_config WHERE is_active = true;
