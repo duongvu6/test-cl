@@ -26,6 +26,7 @@ export default function BonusSection({ questions, players, answers, onChange }: 
 
           {q.question_type === "motm" ? (
             <div className="space-y-2">
+              <p className="text-xs text-gray-400 mb-1">Chọn 1 cầu thủ (<strong className="text-yellow-400">+{q.option_a_points}đ</strong>)</p>
               {homePlayers.length > 0 && (
                 <div>
                   <p className="text-xs text-gray-500 mb-1">{homePlayers[0]?.team === "home" ? "Đội nhà" : "Đội khách"}</p>

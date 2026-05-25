@@ -43,9 +43,6 @@ export default function PredictionForm({ matchData }: { matchData: MatchData }) 
         <h2 className="text-xl font-bold mb-2">
           {match.home_team} vs {match.away_team}
         </h2>
-        <p className="text-sm text-gray-500">
-          {match.match_date ? new Date(match.match_date).toLocaleString("vi-VN") : "Sắp diễn ra"}
-        </p>
       </div>
 
       <div className="bg-gray-900 rounded-lg p-4 border border-gray-800 space-y-4">
@@ -86,7 +83,7 @@ export default function PredictionForm({ matchData }: { matchData: MatchData }) 
         </div>
 
         <div className="bg-gray-800 rounded p-3 text-sm text-gray-400 space-y-1">
-          <p>Kết quả chính xác (thắng/hòa/thua): <strong className="text-white">+3 điểm</strong></p>
+          <p>Kết quả chính xác sau thời gian thi đấu chính thức(thắng/hòa/thua): <strong className="text-white">+3 điểm</strong></p>
           <p>Số bàn đội nhà chính xác: <strong className="text-white">+1 điểm</strong></p>
           <p>Số bàn đội khách chính xác: <strong className="text-white">+1 điểm</strong></p>
           <p>Hiệu số chính xác: <strong className="text-white">+1 điểm</strong></p>

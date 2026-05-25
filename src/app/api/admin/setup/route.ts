@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
     { text: "Tổng bàn thắng trên 2.5?", type: "yes_no", a: "Trên 2.5", ap: 3, b: "Dưới 2.5", bp: 3, order: 2 },
     { text: "Có thẻ đỏ trong trận?", type: "yes_no", a: "Có", ap: 3, b: "Không", bp: 3, order: 3 },
     { text: "Đội nào giao bóng trước?", type: "multiple_choice", a: "PSG", ap: 2, b: "Arsenal", bp: 2, order: 4 },
-    { text: "Cầu thủ xuất sắc nhất trận?", type: "motm", a: null, ap: 5, b: null, bp: 0, order: 5 },
+    { text: "Cầu thủ xuất sắc nhất trận?", type: "motm", a: null, ap: 10, b: null, bp: 0, order: 5 },
   ];
 
   for (const q of defaultQuestions) {
